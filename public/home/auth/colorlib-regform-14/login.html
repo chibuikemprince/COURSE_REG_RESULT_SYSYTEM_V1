@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log in</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+	
+	<style>
+	.form-row .form-group, .form-row .form-radio {
+    width: 50%;
+    padding: 0 11px;
+    margin: auto;
+}
+	</style>
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> " id="signup-form"-->
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" class="signup-form" onsubmit="loginSubmit(event)" style="height:auto">
+					 <h3 align="center"> Login Form </h3>
+					 <h4 align="center" id="errors"> </h4>
+                        <div class="form-row" >
+                          
+						  	
+							 <div class="form-group">
+                                    <label for="city">Reg No</label>
+                                
+ <input type="text" class="form-input" name="regno" />
+								</div>
+                          
+						
+
+						
+                        </div>
+                          <div class="form-row">
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-input" name="password" id="password"/>
+                            </div>
+                            
+                        </div>
+                     
+					 
+					 <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Submit" style="margin-right:280px;"/>
+                        </div>
+                    
+					</form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+	<script src="axios.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

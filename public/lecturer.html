@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css"
+	      crossorigin="anonymous">
+    <title>Result Processing</title>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script> -->
+	
+	
+	
+<script src="home/soesit_lib/js/soesit_jcore.js"> </script>
+<script src="home/soesit_lib/js/soesit_boot_core.js"> </script>
+    <script src="js/xlsx.full.min.js"></script>
+    <script src="js/basic.js"></script> 
+	
+    <script src="js/api.js"></script>
+</head>
+
+<body>
+
+
+
+<div class="header-container-wrapper">
+  <div class="header-container">
+    <div class="custom-header-bg">
+      <div class="page-center">
+        <div class="logo">  <img class="img-responsive" src="home/images/logo.jpg" style="height:70px;width:70px;border-radius:50%;" />
+    <b style="color:white;font-size:26px;">  Lecturers Portal
+	  
+	  </div>
+        <div class="navigation">
+          <ul>
+            <li id="button" ><a href="#" class="button click-upload"><i class="fa fa-cloud-upload" aria-hidden="true"></i>Upload & Preview</a></li>
+            <li id="save" ><a href="#" class="button open-progress"><i class="fa fa-tasks" aria-hidden="true"></i>Save</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="body-container-wrapper">
+  <div class="body-container">
+    <div class="page-center">
+      
+     <h2 style="color:black">Welcome <strong id="username_dashboard"><br/> Loading ..., Please wait </strong></h2>
+     <br/>
+
+      
+      <i class="fa fa-cloud" aria-hidden="true"></i>
+       <h5 style="color:black">Upload Your <strong> Questions </strong></h5>
+	  
+	  <br/>
+<select style="height:33px;width:auto;margin-bottom:20px;font-size:18px;" id="selectcourses" >
+<option> Select Course</option>
+</select>
+ 
+      <a class="upload" id="call-to-action" onclick="document.getElementById('input').click()" >
+	  <span>Select Your Upload</span></a>
+	  <br/>
+	  
+	   
+	  
+	  
+	  
+      <form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
+        <div id="drop">
+      <input type="file" name="upl" multiple  multiple class="upload-hidden"  id="input" accept=".xls,.xlsx" >
+      
+	  </div>
+        </form>
+		 <span id="selectedName" style="color:black;font-size:16px;"></span>
+	  
+		
+      <div class="file-upload-bar" style="display:none">
+        <div class="bar-wrapper">
+          <div class="overall"><span>Overall Progress</span>
+            <div class="progress-bar-overall">
+              <span><b>20%</b></span>
+            </div>
+          </div>
+          <div class="individual-files">
+            <ul>
+              <li>
+                <span class="filename"><i>File Name:</i><b>xyz.jpg</b></span>
+                <span class="filesize"><i>File Size:</i><b>Mb</b></span>
+                <span class="file-link"><i>File Link</i><b><input value="http://www.qbus.com/txt.jpg"></b></span>
+                <span class="copy-link"><b>Copy Link</b></span>
+              </li>
+              <li>
+                <span class="filename"><i>File Name:</i><b>xyz.jpg</b></span>
+                <span class="filesize"><i>File Size:</i><b>Mb</b></span>
+                <span class="file-link"><i>File Link</i><b><input value="http://www.qbus.com/txt.jpg"></b></span>
+                <span class="copy-link"><b>Copy Link</b></span>
+              </li>
+              <li>
+                <span class="filename"><i>File Name:</i><b>xyz.jpg</b></span>
+                <span class="filesize"><i>File Size:</i><b>Mb</b></span>
+                <span class="file-link"><i>File Link</i><b><input value="http://www.qbus.com/txt.jpg"></b></span>
+                <span class="copy-link"><b>Copy Link</b></span>
+              </li>
+              <li>
+                <span class="filename"><i>File Name:</i><b>xyz.jpg</b></span>
+                <span class="filesize"><i>File Size:</i><b>Mb</b></span>
+                <span class="file-link"><i>File Link</i><b><input value="http://www.qbus.com/txt.jpg"></b></span>
+                <span class="copy-link"><b>Copy Link</b></span>
+              </li>
+              <li>
+                <span class="filename"><i>File Name:</i><b>xyz.jpg</b></span>
+                <span class="filesize"><i>File Size:</i><b>Mb</b></span>
+                <span class="file-link"><i>File Link</i><b><input value="http://www.qbus.com/txt.jpg"></b></span>
+                <span class="copy-link"><b>Copy Link</b></span>
+              </li>
+              <li>
+                <span class="filename"><i>File Name:</i><b>xyz.jpg</b></span>
+                <span class="filesize"><i>File Size:</i><b>Mb</b></span>
+                <span class="file-link"><i>File Link</i><b><input value="http://www.qbus.com/txt.jpg"></b></span>
+                <span class="copy-link"><b>Copy Link</b></span>
+              </li>
+              <li>
+                <span class="filename"><i>File Name:</i><b>xyz.jpg</b></span>
+                <span class="filesize"><i>File Size:</i><b>Mb</b></span>
+                <span class="file-link"><i>File Link</i><b><input value="http://www.qbus.com/txt.jpg"></b></span>
+                <span class="copy-link"><b>Copy Link</b></span>
+              </li>
+              <li>
+                <span class="filename"><i>File Name:</i><b>xyz.jpg</b></span>
+                <span class="filesize"><i>File Size:</i><b>Mb</b></span>
+                <span class="file-link"><i>File Link</i><b><input value="http://www.qbus.com/txt.jpg"></b></span>
+                <span class="copy-link"><b>Copy Link</b></span>
+              </li>
+              <li>
+                <span class="filename"><i>File Name:</i><b>xyz.jpg</b></span>
+                <span class="filesize"><i>File Size:</i><b>Mb</b></span>
+                <span class="file-link"><i>File Link</i><b><input value="http://www.qbus.com/txt.jpg"></b></span>
+                <span class="copy-link"><b>Copy Link</b></span>
+              </li>
+              <li>
+                <span class="filename"><i>File Name:</i><b>xyz.jpg</b></span>
+                <span class="filesize"><i>File Size:</i><b>Mb</b></span>
+                <span class="file-link"><i>File Link</i><b><input value="http://www.qbus.com/txt.jpg"></b></span>
+                <span class="copy-link"><b>Copy Link</b></span>
+              </li>
+              <li>
+                <span class="filename"><i>File Name:</i><b>xyz.jpg</b></span>
+                <span class="filesize"><i>File Size:</i><b>Mb</b></span>
+                <span class="file-link"><i>File Link</i><b><input value="http://www.qbus.com/txt.jpg"></b></span>
+                <span class="copy-link"><b>Copy Link</b></span>
+              </li>
+              <li>
+                <span class="filename"><i>File Name:</i><b>xyz.jpg</b></span>
+                <span class="filesize"><i>File Size:</i><b>Mb</b></span>
+                <span class="file-link"><i>File Link</i><b><input value="http://www.qbus.com/txt.jpg"></b></span>
+                <span class="copy-link"><b>Copy Link</b></span>
+              </li>
+            </ul>
+            </div>
+        </div>
+      </div>
+      <div class="file-upload-bar-closed" style="display:none"></div>
+    </div>
+  </div>
+</div>
+
+ <div class="col-md-12" id="jsondata_p" style="height:auto;display:none;" >
+    <pre id="jsondata"></pre>
+</div>
+	
+<div class="footer-container-wrapper" >
+  <div class="footer-container">
+    <div class="custom-footer-bg">
+      <div class="page-center">
+        <b style="float:left;" onclick="logout('home/index.html')">  <span class="filename" id="logoutbtn"><i style="text-decoration:underline;color:red;font-size:16px;" >Logout</i> 
+ </span></b>
+ 
+ 
+        <p style="float:right;">Developed by JOSHUA</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	
+	
+	
+	
+	
+	
+	
+</body>
+<script src="js/excel.js"></script>
+
+    <script src="js/lecturers.js"></script>
+</html>
