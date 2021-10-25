@@ -274,7 +274,7 @@ if(response.hasOwnProperty("data")){
 var tableData = response.data;
 //console.log(tableData);
 
-var table = ' <table class="table">  <thead>  <tr> <th scope="col">#</th> <th scope="col"> course Code</th> <th scope="col">CA</th> <th scope="col">Assignment</th> <th scope="col">Exam</th>  <th scope="col">Total</th> <th scope="col"> session </th> <th scope="col"> semester </th>  <th scope="col"> Unit</th>  <th scope="col">GPA </th> <th scope="col">Grade </th> </tr> </thead><tbody>';
+var table = ' <table class="table">  <thead>  <tr> <th scope="col">#</th> <th scope="col"> Course Code</th> <th scope="col">CA</th> <th scope="col">Assignment</th> <th scope="col">Exam</th>  <th scope="col">Total</th> <th scope="col"> Session </th> <th scope="col"> Semester </th>  <th scope="col"> Unit</th>  <th scope="col">Grade Point </th> <th scope="col">Grade </th> </tr> </thead><tbody>';
 tableData.forEach(myelement=>{
 	totalGPA = Number(totalGPA)+Number(myelement.gp);
 	totalUnit = Number(totalUnit)+Number(myelement.unit);
@@ -292,7 +292,7 @@ table +="</tbody></table>";
 if(response.data.length>0){
 	setTimeout(function(){document.getElementById("upload_title").innerHTML = data.semester+" semester "+data.session+" sesssion result"},500);
 	 setTimeout(function(){document.getElementById("jsondata_p").innerHTML = table},500);
-	  setTimeout(function(){document.getElementById("jsondata_p").innerHTML += " <div style='margin-left:50px' ><br/>   Total GPA: "+totalGPA+"</br/> Total Units: "+totalUnit+" <br/> CGPA "+parseFloat(totalGPA/totalUnit)+"</div>"},500);
+	  setTimeout(function(){document.getElementById("jsondata_p").innerHTML += " <div style='margin-left:50px' ><br/>   Total GP: "+totalGPA+"</br/> Total Units: "+totalUnit+" <br/> CGPA "+parseFloat(totalGPA/totalUnit)+"</div>"},500);
 	//  setTimeout(function(){document.getElementById("jsondata_p").innerHTML += " <div style='margin-left:50px' ><br/>   Total GPA: "+totalGPA+"</br/> Total Units: "+totalUnit+" <br/> CGPA "+parseFloat(totalGPA/totalUnit)+"</div>"},500);
  setTimeout(function(){document.getElementById("jsondata_p").innerHTML += " <br/> <button style='margin-left:50px;' id='result_print' onclick=\"printElem()\">Print </button>"},500);
 document.getElementById("jsondata_p").style.display="block";
